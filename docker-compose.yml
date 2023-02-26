@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  cl1:
+    build: Dockerfile
+    image: cl1_image
+    container_name: cl1
+    volumes:
+      - .:/app
+    command: /bin/sh -c "while true; do echo hello world; sleep 1; done"
